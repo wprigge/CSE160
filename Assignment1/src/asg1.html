@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment1</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        #pdfWrapper {
+            display: none;
+        }
+    </style>
+</head>
+
+<body onload="main()">
+    <div class="container">
+        <div id="leftPanel">
+            <canvas id="webgl" width="400" height="400">
+                Please use a browser that supports "canvas"
+            </canvas>
+
+            <br>
+            <button type="button" id="clear">Clear Canvas</button>
+            <br><br>
+            <button type="button" id="pointsButton">Square</button>
+            <button type="button" id="trianglesButton">Triangle</button>
+            <button type="button" id="circlesButton">Circle</button>
+            <br><br>
+            Red <input type="range" min="0" max="100" value="100" class="slider" id="redSlider">
+            <br>
+            Green <input type="range" min="0" max="100" value="100" class="slider" id="greenSlider">
+            <br>
+            Blue <input type="range" min="0" max="100" value="100" class="slider" id="blueSlider">
+            <br>
+            Alpha <input type="range" min="0" max="100" value="100" class="slider" id="alphaSlider">
+            <br><br>
+            Size <input type="range" min="5" max="40" value="15" class="slider" id="sizeSlider">
+            <br>
+            Segments(Circles 3-36) <input type="range" min="3" max="36" value="10" class="slider" id="segmentSlider">
+            <br><br>
+            <button type="button" id="rainbowToggle">Toggle Rainbow Brush</button>
+            <label for="mirrorMode">Mirror Mode:</label>
+            <select id="mirrorMode">
+                <option value="none">None</option>
+                <option value="y">Y-Axis</option>
+                <option value="x">X-Axis</option>
+                <option value="both">4-way Symmetry</option>
+            </select>
+
+            <br><br>
+            <button type="button" id="drawButton">Draw Custom Image</button>
+            <button type="button" id="showPdfButton">Show Hand-Drawn Image</button>
+
+            <br><br>
+            Extra Features:<br>
+            • Range of transparent painting with alpha slider<br>
+            • Rainbow brush toggle which overrides current color and cycles through <br>
+            multiple colors while drawing, best when brush held down<br>
+            • Image of hand-drawn sketch loaded with a button (to the right of canvas)<br>
+            • MirrorMode selector which lets you draw symmetrically across x axis, <br>
+            or y axis, or all 4 quadrants at the same time<br>
+        </div>
+        
+
+        <div id="pdfWrapper">
+            <iframe src="RocketPhoto.pdf" width="400" height="400"></iframe>
+        </div>
+        
+    </div>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="points.js"></script>
+    <script src="circles.js"></script>
+    <script src="asg1.js"></script>
+
+    <script>
+        document.getElementById('showPdfButton').onclick = function () {document.getElementById('pdfWrapper').style.display = 'block';};
+    </script>
+</body>
+</html>
