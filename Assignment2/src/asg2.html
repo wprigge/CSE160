@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--Made by William Prigge: wprigge@ucsc.edu-->
+<!--Notes to grader: I used a few online resources including ChatGPT for help with parts of this assignment like bugfixing-->
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment1</title>
+</head>
+<body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+        Please use a browser that supports "canvas"
+    </canvas>
+
+    <p id="fpsText">FPS info will appear here.</p>
+    
+    Regular Animation:
+    <button type="button" id="regularAnimOn">ON</button>
+    <button type="button" id="regularAnimOff">OFF</button>
+
+    <br><br>
+    Front Legs Slider:<input type="range" min="-25" max="25" value="0" class="slider" id="legSlider">
+    <br>
+    Front Legs Hooves slider:<input type="range" min="-15" max="15" value="0" class="slider" id="hoofSlider">
+    <br>
+
+    Camera Angle <input type="range" min="-180" max="180" value="-15" class="slider" id="angleSlider">
+
+    <br><br>
+    Features:
+    <ul>
+        <li>Move Camera around with both drag click and slider for left/right rotation</li>
+        <li>'Poke' Animation with shift click which activates Rhino Charge</li>
+        <li>Slider for rotaiton of front legs and hooves(Overridden by Poke Animation)</li>
+        <li>Legs and Hooves return to regular animation(if on) after delay</li>
+    </ul>
+
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="points.js"></script>
+    <script src="circles.js"></script>
+    <script src="cone.js"></script>
+    <script src="cube.js"></script>
+    <script src="asg2.js"></script>
+</body>
+</html>
