@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--Made by William Prigge: wprigge@ucsc.edu-->
+<!--Notes to grader: I used a few online resources including ChatGPT for help with parts of this assignment like bugfixing-->
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment1</title>
+</head>
+<body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+        Please use a browser that supports "canvas"
+    </canvas>
+    <br><br>
+    Features: 
+    <ul>
+        <li>Move with WASD, turn camera left/right with Q/E</li>
+        <li>Rotation with mousemovement (hold click and drag)</li>
+        <li>Simple minecraft with Z as build, C as delete <br>(detection works best after rotation with mouse)</li>
+        <li>Textures for walls and floor</li>
+    </ul>
+    
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="points.js"></script>
+    <script src="circles.js"></script>
+    <script src="cone.js"></script>
+    <script src="cube.js"></script>
+    <script src="camera.js"></script>
+    <script src="asg3.js"></script>
+</body>
+</html>
