@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--Made by William Prigge: wprigge@ucsc.edu-->
+<!--Notes to grader: I used a few online resources including ChatGPT for help with parts of this assignment like bugfixing-->
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment1</title>
+</head>
+<body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+        Please use a browser that supports "canvas"
+    </canvas>
+    <br>
+    Light X <input type="range" min="-250" max="250" value="0" class="slider" id="lightSliderX">
+    Light Y <input type="range" min="-250" max="250" value="240" class="slider" id="lightSliderY">
+    <br>
+    Light Z <input type="range" min="-250" max="250" value="0" class="slider" id="lightSliderZ">
+
+    <br><br>
+    Light Movement:
+    <button type="button" id="lightAnimOn">ON</button>
+    <button type="button" id="lightAnimOff">OFF</button>
+    <br>
+
+    Light is On:
+    <button type="button" id="lightOn">ON</button>
+    <button type="button" id="lightOff">OFF</button>
+    <br>
+    Light RGB:
+    <br>
+    RED: <input type="range" min="0" max="255" value="255" class="slider" id="lightR">
+    GREEN: <input type="range" min="0" max="255" value="255" class="slider" id="lightG"><br>
+    BLUE: 
+    <input type="range" min="0" max="255" value="255" class="slider" id="lightB">
+    <br>
+    Spotlight is On:
+    <button type="button" id="spotlightOn">ON</button>
+    <button type="button" id="spotlightOff">OFF</button>
+    <br>
+    
+    Camera Angle <input type="range" min="0" max="360" value="180" class="slider" id="angleSlider">
+    <br>
+    Normals:
+    <button type="button" id="normalAnimOn">ON</button>
+    <button type="button" id="normalAnimOff">OFF</button>
+
+    <br><br>
+    Features: 
+    <ul>
+        <li>Light from small cube, move with Light XYZ sliders</li>
+        <li>Light can move across X plane with Light Movement Button</li>
+        <li>Can turn Light on/off, Can change RGB of light with RGB sliders</li>
+        <li>Can turn spotlight on/off (lights up floor)</li>
+        <li>Rotate around sphere with Camera Angle Slider, no WASD movement here</li>
+        <li>Can turn color normals On/Off with button</li>
+        
+    </ul>
+    
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="points.js"></script>
+    <script src="circles.js"></script>
+    <script src="cone.js"></script>
+    <script src="cube.js"></script>
+    <script src="camera.js"></script>
+    <script src="sphere.js"></script>
+    <script src="asg4.js"></script>
+</body>
+</html>
